@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Service\ProductService;
+use Illuminate\Http\JsonResponse;
 
 class ProductController extends BaseController
 {
@@ -14,9 +15,9 @@ class ProductController extends BaseController
         //
     }
 
-    public function searchByCode($code, ProductService $productService)
+    public function searchByCode($code, ProductService $productService) : JsonResponse
     {
         $response = $productService->getProductInfo($code);
-        return $this->success($response);
+        return $response ? $this->success($response) : $this->error();
     }
 }

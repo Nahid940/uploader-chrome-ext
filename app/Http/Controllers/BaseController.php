@@ -17,8 +17,12 @@ class BaseController extends Controller
         ], $status);
     }
 
-    public function error()
+    public function error($message = "No data found!",$status = 400)
     {
-        
+        return response()->json([
+            'status' => 'error',
+            'message' => $message,
+            'data' => null,
+        ], $status);
     }
 }

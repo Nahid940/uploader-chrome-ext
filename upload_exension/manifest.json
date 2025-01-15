@@ -1,0 +1,18 @@
+{
+    "manifest_version": 3,
+    "name": "Facebook Marketplace Uploader - Nahid",
+    "version": "1.0",
+    "description": "Upload products to French Facebook Marketplace.",
+    "permissions": ["scripting", "activeTab", "storage"],
+    "background": {
+        "service_worker": "background.js"
+    },
+    "host_permissions": [
+        "*://*.facebook.com/*",
+        "http://localhost/*"
+    ],
+    "action": {
+        "default_popup": "popup.html",
+        "default_icon": "cloud-computing.png"
+    }
+}

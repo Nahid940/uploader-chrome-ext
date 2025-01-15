@@ -8,10 +8,10 @@ use App\Models\Product;
 class ProductService {
 
 
-    public function getProductInfo($code)
+    public function getProductInfo($code) :mixed
     {
         $product = Product::where('code', $code)->first();
-        return new ProductResource($product);
+        return $product ? new ProductResource($product) : null;
     }
 
 }

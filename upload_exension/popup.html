@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Facebook Marketplace Uploader - Nahid</title>
+    <style>
+        /* General Styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f3f4f6;
+            color: #333;
+            width: 320px;
+            height: auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding-bottom: 0px;
+        }
+
+        h3 {
+            margin-top: 20px;
+            color: #0078D7;
+            font-size: 18px;
+            text-align: center;
+        }
+
+        .container {
+            padding: 20px;
+            background: #e5ffee;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            width: 90%;
+        }
+
+        /* Input Styles */
+        input[type="text"] {
+            width: 90%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 14px;
+        }
+
+        /* Button Styles */
+        button {
+            background-color: #0078D7;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            padding: 10px 15px;
+            font-size: 14px;
+            cursor: pointer;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #005BB5;
+        }
+
+        button:active {
+            transform: scale(0.98);
+        }
+
+        /* Product Details Styles */
+        .product-details {
+            margin-top: 20px;
+            text-align: left;
+        }
+
+        .product-details img {
+            width: 100%;
+            border-radius: 10px;
+            margin-top: 10px;
+        }
+
+        .product-details h4 {
+            margin: 10px 0 5px;
+        }
+
+        .product-details p {
+            margin: 5px 0;
+            font-size: 14px;
+            color: #555;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h3>My Product Uploader</h3>
+        <input type="text" id="productTitle" placeholder="Enter product code..." />
+        <span id="error_message" style="color: red;display: block;"></span>
+        <button id="searchProduct">Search Product</button>
+
+        <div id="productDetails" class="product-details" style="display: none;">
+            <h4 id="productName"></h4>
+            <p id="productDescription"></p>
+            <p><strong>Price:</strong> €<span id="productPrice"></span></p>
+            <img id="productImage" src="" alt="Product Image" />
+            <button id="uploadProduct">Upload Product</button>
+        </div>
+    </div>
+
+    <script src="popup.js"></script>
+</body>
+</html>
